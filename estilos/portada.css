@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+html
+{
+	background: url('../imagenes/sacomujer.jpg') no-repeat center center  fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+body
+{
+	margin-top: 50px;
+	background: none;
+}
+
+.panelAcceso
+{
+  max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}

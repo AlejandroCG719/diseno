@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+	.imagenFondoPais
+	{
+		background-image: url('../imagenes/vestido.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+
+	.imagenFondoEstado
+	{
+		background-image: url('../imagenes/vestido-fiesta-paris-por-delante.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+
+	.imagenFondoProducto
+	{
+		background-image: url('../imagenes/P_895606519TM.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+
+	.imagenFondoCaja
+	{
+		background-image: url('../imagenes/rebajas-enero-2020-vestido-flores_a6008610_1280x1829.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+
+	.imagenFondoDepartamento
+	{
+		background-image: url('../imagenes/vestido-bicolor.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+
+	.imagenFondoEmpleado
+	{
+		background-image: url('../imagenes/0514315629_1_1_3.jpg');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+

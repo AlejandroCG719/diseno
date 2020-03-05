@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Costura a tu Medida">
+	<meta name="author" content="Ceron Guzman Alejandro">
+	<link href="../estilos/bootstrap.min.css" rel="stylesheet">
+	<link href="../estilos/font-awesome.min.css" rel="stylesheet">
+	<link href="../estilos/menu_izquierdo.css" rel="stylesheet">
+	<link href="../imagenes/Slogan.png" rel="shortcut icon" type="image/png"/>
+	<title>Catalogo de Prendas</title>
+	</head>
+	
+	<body>
+	  <nav class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container-fluid">
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMenuColapsable" aria-expanded="false">
+			  <span class="sr-only">Menu Colapsable</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand"  href="menu.html">Costura a tu Medida</a>
+			</div>
+			<div id="navbarMenuColapsable" class="navbar-collapse collapse">
+			   <ul class="nav navbar-nav visible-xs">
+			     <li><a href="paises.html">XV años</a></li>
+				 <li><a href="estados.html">Novia</a></li>
+				 <li><a href="productos.html">Elegantes</a></li>
+				 <li><a href="caja.html">Presentacion</a></li>
+				 <li><a href="departamentos.html">Casuales</a></li>
+				 <li><a href="empleados.html">Noche</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right visible-xs">
+				  <li><a href="javascript: cerrarSesion();">Salir</a></li>
+				</ul>
+			  </div>
+		    </div>
+		  </nav>
+		  <div id="divLenguetas" class="container-fluid sr-only">
+		    <div class="container" role="navigation">
+			  <ul id="tabsMenu" class="nav nav-tabs">
+			    <li><a href="#divTabListaPaises" data-toggle="tab">Listado</a></li>
+				<li><a href="#divTabFormularioPais" data-toggle="tab">Formulario</a></li>
+				<li><a href="#divTabBorrarPais" data-toggle="tab">Borrar</a></li>
+				<li><a href="#divTabBuscarPais" data-toggle="tab">Buscar</a></li>
+			  </ul>
+			</div>
+		  </div> <!-- divLenguetas -->
+		  <div id="divContenedorFluido" class="container-fluid">
+		    <div id="divRowPrincipal" class="row">
+			  <div id="divMenuLateral" class="col-sm-3 col-md-2 sidebar">
+			  	<ul class="nav nav-sidebar">
+				    <li><a href="paises.html">Paises</a></li>
+					<li><a href="estados.html">Estados</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="caja.html">Caja</a></li>
+					<li><a href="departamentos.html">Departamentos</a></li>
+					<li><a href="empleados.html">Empleados</a></li>
+					<li><a href="usuario.html">Usuarios</a></li>
+					<li><a href="javascript: cerrarSesion();">Salir</a></li>
+				</ul>
+			   </div> <!-- divMenuLateral -->
+			   	<div id="divContenidoPrincipal" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			    	<div id="divTabsPrincipal" class="tab-content">
+				   		<div id="divTabListaPaises" class="tab-pane fade in active">
+				     		<h1>Catálogo Prenda</h1>
+					 		<div class="btn-group btn-group-justified">
+					   			<a id="buttonAgregar" onclick="javascript: agregarPais();" class="btn btn-primary">
+							 <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+							 &nbsp;Agregar Prenda
+							 </a>
+								<a id="buttonReporte" onclick="javascript: crearPDF();" class="btn btn-info">
+							   <i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i>
+							   &nbsp;Crear PDF
+							 </a>
+							 	<a id="buttonBuscar" onclick="javascript: mostrarBusqueda();" class="btn btn-info">
+							   <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+							   &nbsp;Busqueda
+							 </a>
+							 	<a id="buttonListarTodos" onclick="javascript: listarPaises();" class="btn btn-info">
+							   <i class="fa fa-list fa-lg" aria-hidden="true"></i>
+							   &nbsp;Listar Todos
+							 </a>
+					   		</div>
+						    <table class="table table-striped">
+								<thead>
+							   		<tr>
+									  <th>&nbsp;</th>
+									  <th>ID</th>
+								      <th>Prenda</th>
+									   <th>ISO</th>
+									</tr>
+							    </thead>
+							    <tbody  id="tbodyPaises">
+									<tr>
+								   		<td>
+									   		<button id="buttonEditar" type="button" onclick="javascript: editarPais();" class="btn btn-sm btn-warning">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+									   		</button>
+											<br class="visible-xs visible-sm" style="margin: 5px;"/>&nbsp;
+									   		<button id="buttonBorrar" type="button" onclick="javascript: borrarPais();" class="btn btn-sm btn-danger">
+									  		 <i class="fa fa-trash" aria-hidden="true"></i>
+									   		</button>
+								  		</td>
+								  		<td>&nbsp;</td>
+								  		<td>Esperando datos...</td>
+								  		<td>&nbsp;</td>
+								 	</tr>
+								</tbody>
+							  </table>
+						</div> <!-- divTabListaPaises -->
+						 <div id="divTabFormularioPais" class="tab-pane fade in">
+						    <h1 id="h1TituloFormulario">Formulario Prenda</h1>
+							<div class="form-group">
+							  <label for="idPais">ID</label>
+							  <input id="idPais" type="number" class="form-control" maxlength="10" placeholder="" autocomplete="off" disabled/>
+							</div>
+							<div class="form-group">
+							  <label for="nombre">PRENDA</label>
+							  <input id="nombre" type="text" class="form-control" maxlength="255" placeholder="Nombre del Pais" autocomplete="off" />
+							</div>
+							<div class="form-group">
+							  <label for="iso2">ISO</label>
+							  <input id="iso2" type="text" class="form-control" maxlength="2" placeholder="ISO del Prenda" autocomplete="off" />
+							</div>
+							<div class="btn-group btn-group-justified">
+							  <a id="buttonListar" onclick="javascript: mostrarListado()" class="btn btn-info">
+							    <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+								&nbsp;Listado
+							  </a>
+							  <a id="buttonValidar" onclick="javascript: guardarPais();" class="btn btn-primary">
+							    <i class="fa fa-floppy-o fa-lg" aria-hidden="true"></i>
+								&nbsp;Guardar
+							  </a>
+							</div>
+						 </div> <!-- divTabFormularioPais -->
+						  <div id="divTabBorrarPais" class="tab-pane fade in">
+						   		<h1>Eliminación de Prenda</h1>
+								   <p id="#pDatosPais">Prenda en cuestion</p>
+								   <p class="text-danger">El borrado de la prenda no se puede deshacer</p>
+								   <p class="text-danger">¿Aún así desea borrar la prenda ?</p>
+							   <div class="btn-group btn-group-justified">
+								   <a id="buttonNoBorrar" onclick="javascript: mostrarListado();" class="btn btn-info">
+									   <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+									   Listado&nbsp;
+								   </a>
+								   <a id="buttonSiBorrar" onclick="javascript: borrarPais();" class="btn btn-danger">
+									   <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+									   &nbsp;Si
+								   </a>
+						   	   </div>
+						  </div> <!-- divTabBorrarPais -->
+						   <div id="divTabBuscarPais" class="tab-pane fade in">
+						    	<h1>Busqueda de Prenda</h1>
+								<div class="form-group">
+							  		<label for="selectColumna">Buscar por columna:</label><br/>
+									  <select id="selectColumna" name="selectColumna" class="form-control">
+										<option value="0">Todas las columnas</option>
+										<option value="1">ID</option>
+										<option value="2">Nombre</option>
+										<option value="3">ISO</option>
+									  </select>
+								</div>
+								<div class="form-group">
+								  <label for="inputCriterio">Criterio de busqueda</label>
+								  <input id="inputCriterio" type="text" class="form-control" maxlength="100" placeholder="Criterio de busqueda" autocomplete="on"/>
+								</div>
+								<div class="btn-group btn-group-justified">
+								  <a id="buttonCancelarBusqueda" onclick="javascript: mostrarListado();" class="btn btn-info">
+									<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+									&nbsp;Listado
+								  </a>
+								  <a id="buttonBuscarlos" onclick="javascript: buscarPais()" class="btn btn-primary">
+									<i class="fa fa-search fa-lg" aria-hidden="true"></i>
+									&nbsp;Buscar
+								  </a>
+								</div>
+						   </div> <!-- divTabBuscarPais -->
+					</div> <!-- divTabsPrincipal -->
+					<footer>
+						<br/>
+						<hr/>
+						<p class="text-center">México 2017<sup>©</sup>Ceron Guzman Alejandro</p>
+					 </footer>
+		  		</div> <!-- divContenidoPrincipal -->
+		  	</div> <!-- divRowPrincipal -->
+		  </div> <!-- divContenedorFluido -->
+			<div id="divModalAvisos" class="modal fade" tabindex="-1" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+					  <span aria-hidden="true">&times;</span>
+				    </button>
+				    <h4 class="modal-title">
+					  <i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i>
+					 	&nbsp;Aviso
+				    </h4>
+				  </div>
+				  <div id="divAvisos" class="modal-body">
+					<p>Este mensaje sera reemplazado por otro...</p>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+				  </div>
+			    </div>
+			  </div>
+			</div> <!-- divModalAvisos -->
+		  <script src="../js/libs/jquery-3.1.1.min.js" type="text/javascript"></script>
+		  <script src="../js/libs/bootstrap.min.js" type="text/javascript"></script>
+		  <script src="../js/sanitizador.js" type="text/javascript"></script>
+	  <script src="../js/generador_ids.js" type="text/javascript"></script>
+	  <script src="../js/errores.js" type="text/javascript"></script>
+	  <script src="../js/paises.js" type="text/javascript"></script>
+	  <script src="../js/salir.js" type="text/javascript"></script>
+	</body>
+</html>

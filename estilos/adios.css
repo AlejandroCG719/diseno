@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+html
+{
+	background: url('../imagenes/adios_xg.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body
+{
+	margin-top: 100px;
+	background: none;
+}
+
+.panelAdios
+{
+	width: 100%;
+}
